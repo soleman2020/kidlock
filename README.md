@@ -2,6 +2,8 @@
 
 تطبيق أندرويد يعطي الطفل الهاتف وهو يشاهد يوتيوب فقط: لا يخرج إلى تطبيقات أخرى، ولا يفتح روابط، ولا يرى Shorts، والإعلانات تُتخطّى وتُكتم تلقائيًا. الخروج برمز ولي الأمر فقط.
 
+**⬇️ [تحميل التطبيق — Download APK](https://github.com/soleman2020/kidlock/releases/latest)**
+
 **العربية** · [English](#kidlock-قفل-الأطفال--english)
 
 ## المميزات
@@ -19,7 +21,7 @@
 
 ## طريقة الاستخدام
 
-1. ثبّت التطبيق، ثم فعّل **قفل الأطفال — يوتيوب** من إعدادات إمكانية الوصول.
+1. حمّل التطبيق من [Releases](https://github.com/soleman2020/kidlock/releases/latest) وثبّته، ثم فعّل **قفل الأطفال — يوتيوب** من إعدادات إمكانية الوصول.
    - إن ظهرت رسالة «إعداد مقيّد»: معلومات التطبيق ← القائمة ⋮ ← «السماح بالإعدادات المقيّدة».
 2. عيّن رمز ولي الأمر.
 3. اضغط **تشغيل وضع الأطفال**، فيفتح يوتيوب مقفولًا.
@@ -81,7 +83,7 @@ Hand your child the phone with YouTube only. They can't leave to other apps, ope
 
 ## How to use
 
-1. Install the app, then enable **قفل الأطفال — يوتيوب** in Accessibility settings.
+1. Download the APK from [Releases](https://github.com/soleman2020/kidlock/releases/latest) and install it, then enable **قفل الأطفال — يوتيوب** in Accessibility settings.
    - If you see "Restricted setting": App info → ⋮ menu → "Allow restricted settings".
 2. Set a parent PIN.
 3. Tap **Start kids mode** (تشغيل وضع الأطفال). YouTube opens, locked.
