@@ -63,6 +63,15 @@ class KidService : AccessibilityService() {
     private var lastAdSeen = 0L
 
     private val guardTask = Runnable { guard() }
+
+    /** فحص دوري أثناء القفل: بعض الحالات (مثل يوتيوب المصغّر فوق الشاشة الرئيسية) لا ترسل أحداثًا. */
+    private val heartbeat = object : Runnable {
+        override fun run() {
+            if (!alive) return
+            if (prefs.locked) guard()
+            handler.postDelayed(this, HEARTBEAT_MS)
+        }
+    }
     private val adPoll = object : Runnable {
         override fun run() {
             adCheck()
@@ -83,6 +92,7 @@ class KidService : AccessibilityService() {
         if (prefs.mutedByUs) unmute()
         registerDebugReceiver()
         guard()
+        handler.postDelayed(heartbeat, HEARTBEAT_MS)
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
@@ -149,7 +159,14 @@ class KidService : AccessibilityService() {
             }
         }
 
-        if (pkg == null) return
+        if (pkg == null) {
+            // يوتيوب مصغّر (صورة داخل صورة) ولا تطبيق آخر في المقدمة: نعيده لملء الشاشة
+            if (wins.any { it.isInPictureInPictureMode }) {
+                Log.d(TAG, "YouTube minimized (picture-in-picture)")
+                relaunch(fresh = true)
+            }
+            return
+        }
         if (pkg in allowedApps()) {
             if (pkg in YOUTUBE_APPS) prefs.lastApp = pkg
             return
@@ -165,12 +182,15 @@ class KidService : AccessibilityService() {
             handler.postDelayed(guardTask, AFTER_BACK_MS)
             return
         }
-        relaunch()
+        relaunch(fresh = wins.any { it.isInPictureInPictureMode })
     }
 
-    /** نافذة التطبيق الذي يستخدمه الطفل الآن (نتجاهل نوافذ النظام ونوافذنا العائمة). */
+    /**
+     * نافذة التطبيق الذي يستخدمه الطفل الآن (نتجاهل نوافذ النظام ونوافذنا العائمة).
+     * نافذة «صورة داخل صورة» لا تُحسب: يوتيوب مصغّر فوق الشاشة الرئيسية يعني أن الطفل خرج منه.
+     */
     private fun frontApp(wins: List<AccessibilityWindowInfo>): AccessibilityWindowInfo? {
-        val apps = wins.filter { it.type == AccessibilityWindowInfo.TYPE_APPLICATION }
+        val apps = wins.filter { it.type == AccessibilityWindowInfo.TYPE_APPLICATION && !it.isInPictureInPictureMode }
         return apps.firstOrNull { it.isFocused } ?: apps.firstOrNull { it.isActive } ?: apps.firstOrNull()
     }
 
@@ -193,7 +213,7 @@ class KidService : AccessibilityService() {
     }
 
     /** يعيد الطفل إلى يوتيوب (من حيث توقف). */
-    private fun relaunch() {
+    private fun relaunch(fresh: Boolean = false) {
         val now = SystemClock.uptimeMillis()
         if (now - lastRelaunch < RELAUNCH_GAP_MS) {
             handler.removeCallbacks(guardTask)
@@ -209,6 +229,8 @@ class KidService : AccessibilityService() {
             return
         }
         target.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+        // يوتيوب مصغّر (صورة داخل صورة) لا يعود لملء الشاشة بفتحه فقط: نعيد تشغيله من جديد
+        if (fresh) target.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
         try {
             startActivity(target)
         } catch (e: Exception) {
@@ -261,7 +283,7 @@ class KidService : AccessibilityService() {
         val card = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER_HORIZONTAL
-            layoutDirection = View.LAYOUT_DIRECTION_RTL
+            layoutDirection = View.LAYOUT_DIRECTION_LOCALE
             background = GradientDrawable().apply {
                 cornerRadius = dp(24).toFloat()
                 setColor(0xFF202124.toInt())
@@ -696,6 +718,7 @@ class KidService : AccessibilityService() {
         )
 
         private const val GUARD_DELAY_MS = 120L
+        private const val HEARTBEAT_MS = 1_000L
         private const val RELAUNCH_GAP_MS = 600L
         private const val BACK_WINDOW_MS = 1_500L
         private const val AFTER_BACK_MS = 300L

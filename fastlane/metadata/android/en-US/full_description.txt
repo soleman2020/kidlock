@@ -1,0 +1,13 @@
+<p>Hand your child the phone with YouTube only. KidLock keeps them inside YouTube until a parent enters the PIN.</p>
+<ul>
+<li>Any other app, the home screen, Settings, the browser and the notification shade bounce back to YouTube</li>
+<li>Links opened from inside YouTube don't leave it</li>
+<li>Shorts are closed automatically</li>
+<li>Taps "Skip" on ads as soon as it appears, and mutes the ad</li>
+<li>Optional: allow YouTube Kids too</li>
+<li>4-digit parent PIN (hashed), locks for a minute after 5 wrong tries; exit by long-pressing the top-left corner for 3 seconds</li>
+<li>Phone calls keep working</li>
+</ul>
+<p><b>No internet permission, no data collected.</b></p>
+<p><b>Why the Accessibility permission:</b> it is needed to see which app is in front and send the child back to YouTube, to detect Shorts and ads, and to tap the Skip button.</p>
+<p>Not a full security lock: an older child who knows safe mode can get around it. It doesn't filter content inside YouTube.</p>

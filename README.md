@@ -6,6 +6,14 @@
 
 **العربية** · [English](#kidlock-قفل-الأطفال--english)
 
+<p align="center">
+<img src="docs/demo.gif" width="240" alt="demo">
+<img src="fastlane/metadata/android/ar/images/phoneScreenshots/1.png" width="240" alt="screenshot">
+<img src="fastlane/metadata/android/ar/images/phoneScreenshots/2.png" width="240" alt="screenshot">
+</p>
+
+<p align="center"><i>الطفل يضغط زر الرئيسية ثم يفتح الإعدادات، فيعود يوتيوب تلقائيًا</i></p>
+
 ## المميزات
 
 - **وضع الأطفال**: أي تطبيق آخر يُغلق ويعود يوتيوب خلال ثانية تقريبًا. يشمل ذلك الشاشة الرئيسية والإعدادات والمتصفح وقائمة المشاركة ولوحة الإشعارات.
@@ -13,6 +21,7 @@
 - **إغلاق Shorts** تلقائيًا والرجوع للصفحة الرئيسية.
 - **تخطّي الإعلانات**: يضغط زر «تخطي» فور ظهوره، ويكتم الصوت طوال الإعلان ثم يعيده.
 - **YouTube Kids** مسموح أيضًا (اختياري).
+- **الواجهة بالعربية والإنجليزية** حسب لغة الهاتف.
 - **رمز ولي الأمر** من 4 أرقام:
   - يُحفظ مشفّرًا (SHA-256 مع salt).
   - بعد 5 محاولات خاطئة تُقفل لوحة الأرقام دقيقة كاملة.
@@ -68,6 +77,14 @@
 
 Hand your child the phone with YouTube only. They can't leave to other apps, open links or watch Shorts, and ads are skipped and muted automatically. Only a parent PIN unlocks it.
 
+<p align="center">
+<img src="docs/demo.gif" width="240" alt="demo">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="240" alt="screenshot">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="240" alt="screenshot">
+</p>
+
+<p align="center"><i>The child presses Home, then opens Settings, and YouTube comes right back</i></p>
+
 ## Features
 
 - **Kids mode**: any other app is closed and YouTube comes back within about a second. That includes the home screen, Settings, the browser, the share sheet and the notification shade.
@@ -75,6 +92,7 @@ Hand your child the phone with YouTube only. They can't leave to other apps, ope
 - **Shorts blocking**: Shorts are closed automatically and the app returns to Home.
 - **Ad skipping**: taps "Skip" as soon as it appears, and mutes the sound for the whole ad, then restores it.
 - **YouTube Kids** can be allowed too (optional).
+- **Arabic and English interface**, following the phone's language.
 - **Parent PIN** of 4 digits:
   - Stored hashed (SHA-256 with a salt).
   - After 5 wrong tries the keypad locks for one minute.

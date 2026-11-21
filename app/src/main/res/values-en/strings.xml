@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidLock</string>
+    <string name="tagline">YouTube only for kids, without annoying ads</string>
+
+    <string name="service_label">KidLock — YouTube</string>
+    <string name="service_description">In kids mode the phone stays inside YouTube: any other app closes at once and YouTube comes back, links from inside YouTube don’t open, and the notification shade doesn’t open. It also taps “Skip” on YouTube ads automatically and mutes the ad. Only the parent PIN exits. The app collects no data and never connects to the internet.</string>
+
+    <string name="service_on">Service is on ✓</string>
+    <string name="service_off">Service is off</string>
+    <string name="service_off_hint">Turn on “KidLock — YouTube” in Accessibility settings. If you see “Restricted setting”: open App info → ⋮ menu → “Allow restricted settings”.</string>
+    <string name="open_a11y">Open accessibility settings</string>
+
+    <string name="pin_card_title">Parent PIN</string>
+    <string name="pin_set_hint">A 4-digit PIN you need to leave kids mode. Don’t make it easy, like 1234.</string>
+    <string name="pin_is_set">PIN saved ✓</string>
+    <string name="pin_not_set">No PIN set yet</string>
+    <string name="pin_set">Set PIN</string>
+    <string name="pin_change">Change PIN</string>
+    <string name="pin_enter_current">Enter the current PIN</string>
+    <string name="pin_enter_new">Enter a new 4-digit PIN</string>
+    <string name="pin_confirm">Type the PIN again to confirm</string>
+    <string name="pin_mismatch">The PINs don’t match — try again</string>
+    <string name="pin_too_short">The PIN must be 4 digits</string>
+    <string name="pin_saved">PIN saved</string>
+    <string name="pin_wrong_short">Wrong PIN</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="start_kids">▶  Start kids mode</string>
+    <string name="stop_kids">Stop kids mode</string>
+    <string name="start_need_service">Turn on the service first</string>
+    <string name="start_need_pin">Set a parent PIN first</string>
+    <string name="no_youtube">YouTube isn’t installed on this phone</string>
+    <string name="started_hint">Kids mode is on. To exit: long-press the top-left corner of the screen for 3 seconds, then enter the PIN.</string>
+    <string name="locked_now">Kids mode is on now</string>
+
+    <string name="exit_title">How to exit</string>
+    <string name="exit_body">Long-press the top-left corner of the screen (above the clock) for 3 seconds. The keypad appears; enter your PIN. After 5 wrong tries the keypad locks for a full minute.</string>
+
+    <string name="ads_title">YouTube ads</string>
+    <string name="opt_skip_ads">Tap “Skip” automatically as soon as it appears</string>
+    <string name="opt_mute_ads">Mute the sound for the whole ad</string>
+    <string name="ads_hint">Always works inside YouTube, even outside kids mode. Ads that can’t be skipped are only muted until they end.</string>
+
+    <string name="apps_title">Allowed apps</string>
+    <string name="opt_block_shorts">Close Shorts automatically in kids mode</string>
+    <string name="shorts_hint">Any Short the child opens closes at once and goes back to Home. Works in kids mode only.</string>
+    <string name="opt_allow_kids">Also allow the YouTube Kids app</string>
+    <string name="apps_hint">Tip: YouTube Kids has only content made for young children, and is better than regular YouTube at this age.</string>
+
+    <string name="xiaomi_title">Important for Xiaomi phones</string>
+    <string name="xiaomi_body">1. In the app’s permissions, turn on “Display pop-up windows while running in the background”. Without it the app can’t bring the child back to YouTube.\n2. Turn on “Autostart”.\n3. Set battery saver to “No restrictions”.\n4. Don’t turn on the “Accessibility shortcut” for the service, because pressing it turns the service off.</string>
+    <string name="open_permissions">Open app permissions</string>
+
+    <string name="pin_title">Enter the parent PIN</string>
+    <string name="pin_cancel">Cancel</string>
+    <string name="pin_wrong">Wrong PIN — %1$d tries left</string>
+    <string name="pin_locked_out">Too many tries — wait %1$d seconds</string>
+    <string name="unlocked">Kids mode stopped</string>
+</resources>

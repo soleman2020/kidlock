@@ -1,0 +1,2 @@
+• English interface (follows the phone language)
+• Fix: YouTube shrunk to picture-in-picture over the home screen is now brought back full screen
