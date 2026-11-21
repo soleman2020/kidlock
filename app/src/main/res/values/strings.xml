@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">قفل الأطفال</string>
+    <string name="tagline">يوتيوب فقط للأطفال، بدون إعلانات مزعجة</string>
+
+    <string name="service_label">قفل الأطفال — يوتيوب</string>
+    <string name="service_description">في وضع الأطفال يُبقي الهاتف داخل يوتيوب: أي تطبيق آخر يُغلق فورًا ويعود يوتيوب، والروابط من داخل يوتيوب لا تفتح، ولوحة الإشعارات لا تفتح. ويضغط زر «تخطي» في إعلانات يوتيوب تلقائيًا ويكتم صوت الإعلان. الخروج برمز ولي الأمر فقط. لا يجمع التطبيق أي بيانات ولا يتصل بالإنترنت.</string>
+
+    <string name="service_on">الخدمة مفعّلة ✓</string>
+    <string name="service_off">الخدمة غير مفعّلة</string>
+    <string name="service_off_hint">فعّل «قفل الأطفال — يوتيوب» من إعدادات إمكانية الوصول. إن ظهرت رسالة «إعداد مقيّد»: افتح معلومات التطبيق ← القائمة ⋮ ← «السماح بالإعدادات المقيّدة».</string>
+    <string name="open_a11y">فتح إعدادات إمكانية الوصول</string>
+
+    <string name="pin_card_title">رمز ولي الأمر</string>
+    <string name="pin_set_hint">رمز من 4 أرقام تحتاجه للخروج من وضع الأطفال. لا تجعله سهلًا مثل 1234.</string>
+    <string name="pin_is_set">الرمز محفوظ ✓</string>
+    <string name="pin_not_set">لم يُحدَّد رمز بعد</string>
+    <string name="pin_set">تعيين الرمز</string>
+    <string name="pin_change">تغيير الرمز</string>
+    <string name="pin_enter_current">أدخل الرمز الحالي</string>
+    <string name="pin_enter_new">أدخل رمزًا جديدًا من 4 أرقام</string>
+    <string name="pin_confirm">أعد كتابة الرمز للتأكيد</string>
+    <string name="pin_mismatch">الرمزان غير متطابقين — حاول مرة أخرى</string>
+    <string name="pin_too_short">الرمز يجب أن يكون 4 أرقام</string>
+    <string name="pin_saved">تم حفظ الرمز</string>
+    <string name="pin_wrong_short">الرمز غير صحيح</string>
+    <string name="ok">تم</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="start_kids">▶  تشغيل وضع الأطفال</string>
+    <string name="stop_kids">إيقاف وضع الأطفال</string>
+    <string name="start_need_service">فعّل الخدمة أولًا</string>
+    <string name="start_need_pin">عيّن رمز ولي الأمر أولًا</string>
+    <string name="no_youtube">يوتيوب غير مثبّت على الهاتف</string>
+    <string name="started_hint">وضع الأطفال يعمل. للخروج: اضغط مطولًا 3 ثوانٍ على الركن العلوي الأيسر من الشاشة ثم أدخل الرمز.</string>
+    <string name="locked_now">وضع الأطفال يعمل الآن</string>
+
+    <string name="exit_title">طريقة الخروج</string>
+    <string name="exit_body">اضغط مطولًا 3 ثوانٍ على الركن العلوي الأيسر من الشاشة (فوق الساعة)، ستظهر لوحة الأرقام، أدخل رمزك. بعد 5 محاولات خاطئة تُقفل اللوحة دقيقة كاملة.</string>
+
+    <string name="ads_title">إعلانات يوتيوب</string>
+    <string name="opt_skip_ads">الضغط على «تخطي» تلقائيًا فور ظهوره</string>
+    <string name="opt_mute_ads">كتم الصوت طوال مدة الإعلان</string>
+    <string name="ads_hint">يعمل دائمًا داخل يوتيوب، حتى خارج وضع الأطفال. الإعلانات التي لا تُتخطّى تُكتم فقط حتى تنتهي.</string>
+
+    <string name="apps_title">التطبيقات المسموحة</string>
+    <string name="opt_block_shorts">إغلاق Shorts تلقائيًا في وضع الأطفال</string>
+    <string name="shorts_hint">أي فيديو Shorts يفتحه الطفل يُغلق فورًا ويعود للصفحة الرئيسية. يعمل في وضع الأطفال فقط.</string>
+    <string name="opt_allow_kids">السماح بتطبيق YouTube Kids أيضًا</string>
+    <string name="apps_hint">نصيحة: YouTube Kids فيه محتوى مناسب للصغار فقط، وأفضل من يوتيوب العادي لهذا العمر.</string>
+
+    <string name="xiaomi_title">مهم لهواتف شاومي</string>
+    <string name="xiaomi_body">١. من أذونات التطبيق فعّل «عرض النوافذ المنبثقة أثناء التشغيل في الخلفية» — بدونها لا يستطيع التطبيق إرجاع الطفل إلى يوتيوب.\n٢. فعّل «التشغيل التلقائي».\n٣. اجعل توفير البطارية «بلا قيود».\n٤. لا تفعّل «اختصار إمكانية الوصول» للخدمة، لأن الضغط عليه يوقفها.</string>
+    <string name="open_permissions">فتح أذونات التطبيق</string>
+
+    <!-- لوحة الأرقام فوق يوتيوب -->
+    <string name="pin_title">أدخل رمز ولي الأمر</string>
+    <string name="pin_cancel">إلغاء</string>
+    <string name="pin_wrong">رمز خاطئ — بقي %1$d محاولات</string>
+    <string name="pin_locked_out">محاولات كثيرة — انتظر %1$d ثانية</string>
+    <string name="unlocked">تم إيقاف وضع الأطفال</string>
+</resources>
